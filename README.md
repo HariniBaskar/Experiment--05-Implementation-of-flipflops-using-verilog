@@ -109,9 +109,8 @@ Q(t+1)=T′Q(t)+TQ(t)′
 5. Create university program(VWF) for getting timing diagram.
 6. Give the respective inputs for timing diagram and obtain the results.
 
-### PROGRAM 
-### SR FLIPFLOP
-### PROGRAM
+## SR FLIPFLOP
+### PROGRAM:
 ```
 Program for SR flipflop and verify its truth table in quartus using Verilog programming.
 Developed by: Harini.B
@@ -128,10 +127,34 @@ nand(Q,X,QBAR);
 nand(QBAR,Y,Q);
 endmodule
 ```
-### RTL LOGIC FOR SR FLIPFLOP
+### RTL LOGIC:
 ![de051](https://user-images.githubusercontent.com/93427253/168054646-05435642-d39a-494e-a10e-4313166bba97.png)
-### TIMING DIAGRAM FOR SR FLIPFLOP
+### TIMING DIAGRAM:
 ![srtime](https://user-images.githubusercontent.com/93427253/168054945-621ae6b4-cfe2-4cc5-987a-0268f1a8aca0.png)
+
+## JK FLIPFLOP
+### PROGRAM:
+```
+Program for JK flipflop and verify its truth table in quartus using Verilog programming.
+Developed by: Harini.B
+RegisterNumber:  212221230035
+```
+```
+module de051(J,K,CLK,Q,QBAR);
+input J,K,CLK;
+output Q,QBAR;
+wire P,S;
+nand(P,J,CLK,QBAR);
+nand(S,K,CLK,Q);
+nand(Q,P,QBAR);
+nand(QBAR,S,Q);
+endmodule
+```
+### RTL LOGIC:
+![de052](https://user-images.githubusercontent.com/93427253/168056030-b210599d-0865-4731-a9b0-c33c6240b3ba.png)
+### TIMING DIAGRAM:
+![jktime](https://user-images.githubusercontent.com/93427253/168056075-6fad9c57-47b8-4fc5-b7b9-39e7533426ac.png)
+
 
 
 
