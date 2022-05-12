@@ -158,25 +158,33 @@ endmodule
 ## D FLIPFLOP
 ### PROGRAM:
 ```
-Program for JK flipflop and verify its truth table in quartus using Verilog programming.
+Program for D flipflop and verify its truth table in quartus using Verilog programming.
 Developed by: Harini.B
 RegisterNumber:  212221230035
 ```
 ```
-module DF(D,Clk,Q,Qbar);
-input D,Clk;
-output Q,Qbar;
-assign Dbar=~D;
+module de052(D,CLK,Q,QBAR);
+input D,CLK;
+output Q,QBAR;
+assign DBAR=~D;
 wire X,Y;
-nand(X,D,Clk);
-nand(Y,Dbar,Clk);
-nand(Q,X,Qbar);
-nand(Qbar,Y,Q);
+nand(X,D,CLK);
+nand(Y,DBAR,CLK);
+nand(Q,X,QBAR);
+nand(QBAR,Y,Q);
 endmodule
 ```
-### RTL LOGIC
+### RTL LOGIC:
 ![de053](https://user-images.githubusercontent.com/93427253/168098764-ea70e4aa-5270-4638-9e6c-a95bc8e338c4.png)
 ### TIMING DIAGRAM:
 ![dtime](https://user-images.githubusercontent.com/93427253/168098845-b90cf513-42fd-4bc6-ae65-5ed2779286ee.png)
+
+## T FLIPFLOP
+### PROGRAM:
+```
+Program for T flipflop and verify its truth table in quartus using Verilog programming.
+Developed by: Harini.B
+RegisterNumber:  212221230035
+```
 
 ### RESULTS 
