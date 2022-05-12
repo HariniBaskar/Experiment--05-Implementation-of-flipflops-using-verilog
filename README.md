@@ -186,5 +186,21 @@ Program for T flipflop and verify its truth table in quartus using Verilog progr
 Developed by: Harini.B
 RegisterNumber:  212221230035
 ```
+```
+module de54(T,CLK,Q,QBAR);
+input T,CLK;
+output Q,QBAR;
+wire S,R;
+nand(S,T,CLK,QBAR);
+nand(R,T,CLK,Q);
+nand(Q,S,QBAR);
+nand(QBAR,R,Q);
+endmodule
+```
+### RTL LOGIC:
+![trtl](https://user-images.githubusercontent.com/93427253/168104156-06fde275-aa51-41e4-9558-6ae83ad032b5.png)
+### TIMING DIAGRAM:
+![ttime](https://user-images.githubusercontent.com/93427253/168104346-ebc28f76-df50-416d-b790-56156aea8d3f.png)
 
 ### RESULTS 
+Hence all the flipflops are implemented using verilog and their functionality has been validated using their functional tables.
