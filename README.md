@@ -110,11 +110,29 @@ Q(t+1)=T′Q(t)+TQ(t)′
 6. Give the respective inputs for timing diagram and obtain the results.
 
 ### PROGRAM 
+### SR FLIPFLOP
+### PROGRAM
 /*
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Program for SR flipflop and verify its truth table in quartus using Verilog programming.
+Developed by: Harini.B
+RegisterNumber:  212221230035
 */
+```
+module de05(S,R,CLK,Q,QBAR);
+input S,R,CLK;
+output Q,QBAR;
+wire X,Y;
+nand(X,S,CLK);
+nand(Y,R,CLK);
+nand(Q,X,QBAR);
+nand(QBAR,Y,Q);
+endmodule
+```
+### RTL LOGIC FOR SR FLIPFLOP
+![de051](https://user-images.githubusercontent.com/93427253/168054646-05435642-d39a-494e-a10e-4313166bba97.png)
+### TIMING DIAGRAM FOR SR FLIPFLOP
+![srtime](https://user-images.githubusercontent.com/93427253/168054945-621ae6b4-cfe2-4cc5-987a-0268f1a8aca0.png)
+
 
 
 
